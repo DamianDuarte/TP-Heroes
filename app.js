@@ -1,5 +1,4 @@
 const express = require('express');
-const { dirname } = require('path');
 const app = express();
 const path = require('path');
 const port = 3030;
@@ -15,6 +14,7 @@ app.get("/hamilton", (req, res) => res.sendFile(path.join(__dirname, 'views', 'h
 app.get("/hopper", (req, res) => res.sendFile(path.join(__dirname, 'views', 'hopper.html')));
 app.get("/lovelace", (req, res) => res.sendFile(path.join(__dirname, 'views', 'lovelace.html')));
 app.get("/turing", (req, res) => res.sendFile(path.join(__dirname, 'views', 'turing.html')));
+app.get("/bugs", (req, res) => res.sendFile(path.join(__dirname, 'views', 'bugs.html')));
 
 app.listen(port, () =>
 {
